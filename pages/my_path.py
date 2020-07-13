@@ -1,3 +1,3 @@
 def my_path():
-    files_saved = r'C:\Users\novak\Downloads\BX-CSV-Dump'
+    files_saved = 'pages\data'
     return files_saved

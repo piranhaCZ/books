@@ -1,18 +1,21 @@
 <head>
 <meta charset="UTF-8">
-<title>User Information Form</title>
+ <title>Look for similar books</title>
 </head>
 <body>
+ <h2>I want to read a book similar to: </h2>
 <form action="" method="POST">
-{% csrf_token %}
+
+    {% csrf_token %}
 {{ form.as_p }}
 <input type="Submit" name="submit" value="Submit"/>
 </form>
 
 {% if submitbutton == "Submit" %}
-<h1> Your book name is {{ bookname }}</h1>
-<h1> Your author name is {{ authorname }}</h1>
+  <p>  <font size="5" color="black"> Your book name is: {{ bookname }}</font>  </p>
 
+  <p>  <font size="5" color="black"> Your author name is: {{ authorname }}</font>  </p>
+{% autoescape off %}{{ result_list_html }}{% endautoescape %}
 {% endif %}
 
 </body>

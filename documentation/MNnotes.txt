@@ -1,0 +1,57 @@
+
+NOTES:
+- Clean (at least) small piece of data so data scientist/analyst can start working on basic scripts and testing on small piece of data.
+- Prepare test data (with a few rows to check script, but is it nescessary to test it also on large datasets to check script efficient)
+- Check data source page (origin - data from crawling - quality probably won't be the best)
+- Quick check out data (format, data content, missing data, NULL values etc.) 
+- Run script in Test Environment (
+		-> check outputs and dtypes,
+		-> if object = there can be null values, 
+		-> check null values (why null values) in general, fill null values with default value)
+		-> identify corrupted rows and decide what is wrong (e.g. "\"")
+- diagrams created in Draw.io
+- App in Python Django
+- Loading is exactly from files - but should be: files upload -> data cleaning (cleaning according to usage or intentions) -> upload to database -> make analysis with clean data
+
+
+
+QUESTIONS: --> important if it should be used only once or more times
+
+Data intention
+- Where should be data moved? How we want to use them? only in web app? ? 
+- One time use, X-time use app?? UI App (W3C)? What should be script output?? only ten best? Environment (laptop, phone...)?
+- Permission to use data - open source but we should let know author our names
+- Fast analysis or Detail analysis or both
+- How to check data are up to date?
+- Do we want to add any other data source?
+- Regular data update(e.g. every second Monday)? Automatically? Manually?
+
+Data source
+- Books source (system, manually)? -- download automaticaly zip file from web - web crawling.
+ 
+Data correction:
+- nescessary to clean data in detail? 
+- books in diff language than english (sum) 
+- unify authors? Unify books (x books with same name (similar name) - diff publish-year)
+- &amp
+- special chars - probably corrupted file (german, french encodong - utf-8 doesn't work)
+- source data Users - missing name collumns (Country x County), need add other table "Location to unify location etc. 
+
+
+
+IMPROVEMENTS:
+- work with ratings - one person more ratings - valid date
+- add book picture (what if there is more publish year? use the latest one?
+- unify name books
+- unify authors (J.R.R. Tolkie, J.r.r.TOLKIEN)
+- include also 0 ratings in some ways
+- search according to one or more books( what if books will be totally different genre??)
+- there should be definitely info about book series (linking series together - If I read 1st LoR it should offer next two LoR books as a main option)
+
+Improvements below would need detail system and other data sources (web crawling - not many options cause it is usually prohibited on websites) 
+- script base also on genre and inside-bookwords (key words) (Tolkien vs Harry Potter - people who likes tolkien don't have to like Harry Potter because they are insterested in Middle Earth or Elves (whatever)
+- include user's opinion if the books is similar or not
+- would be great to test Graph Database (similar to looking for friends on social sites - looking for similar books)
+
+
+
