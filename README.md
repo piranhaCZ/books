@@ -1,4 +1,4 @@
-# How to run project at Docker
+# How to run project on Docker
 
 1) Install Docker (on Windows with linux daemon)
 
